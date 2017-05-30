@@ -1,5 +1,6 @@
 requests
-beautifulsoup4
 bs4
 tqdm
 scrapy
+pyqt5
+csv
