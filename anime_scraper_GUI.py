@@ -54,7 +54,7 @@ class Window(QWidget):
 
     def get_info(self):
 
-        self.path = os.path.dirname(__file__)
+        self.path = os.path.dirname(('__file__'))
         os.chdir(self.path)
         seriesurl = self.urlLE.text()
         print("Selected anime series url is {}".format(seriesurl))
@@ -76,7 +76,7 @@ class Window(QWidget):
         self.dldir = QFileDialog.getExistingDirectory(self, "Select Folder to save episodes", os.getenv(self.path))
 
         for i in self.epi_nos:
-            self.one.addItem(i)
+            self.one.addItem(str(i))
 
         self.dl_options[0].stateChanged.connect(self.dl_one)
         self.dl_options[1].stateChanged.connect(self.dl_few)
