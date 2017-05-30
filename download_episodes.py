@@ -1,3 +1,4 @@
+#!/usr/env/bin python3
 ############### D I S C L A I M E R ################
 #                                                  #
 # Downloading copyrighted media without the        #
@@ -10,21 +11,10 @@
 ####################################################
 
 
-############### D I S C L A I M E R ################
-#                                                  #
-# Downloading copyrighted media without the        #
-# owner’s permission is illegal is some countries. #
-# Under no circumstances is this script intended   #
-# to encourage illegal activity, and there are     #
-# no guarantees that this information will         #
-# protect you from any legal action.               #
-#                                                  #
-####################################################
+# The script allows you to give 2 command line arguments. 
+#The first one is the url on animeheaven site that contains list of the episodes. 
+#The second is optional and should contain a a string which tells the folder where you want to  download
 
-
-# the script allows you to give 2 command line arguments. The first one is the url on animeheaven site that contains
-# list of the episodes. The second is optional and should contain a a string which tells the folder where you want to
-#  download
 import requests
 import re
 import sys
@@ -90,7 +80,7 @@ def download_episode(url):
     # The name of  the file to save the video as episode 23
     episode_no = url.split('--')[1]
     print("Downloading episode no %s" % episode_no)
-    name = "episode " + episode_no
+    name = "Episode-{}.mp4 ".format(episode_no)
 
     try:
         response = requests.get(url, stream=True)
