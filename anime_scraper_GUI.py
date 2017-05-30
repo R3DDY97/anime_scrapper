@@ -16,8 +16,8 @@ class Window(QWidget):
         grid = QGridLayout()
         grid.setSpacing(20)
 
-        btns = ["Ckeck for Episodes", "Open", "Download selected \nEpisodes"]
-        options = ["One Episode", "Few Episodes", "All EPisodes"]
+        btns = ["Check for Episodes", "Open", "Download selected \nEpisodes"]
+        options = ["One Episode", "Few Episodes", "All Episodes"]
         labels = ["Enter anime series  url having all episodes list ",
                   "Select folder to save downoladed episodes ",
                   "Hang on takes time to parse and get all Episodes Download Links",
