@@ -11,8 +11,8 @@
 ####################################################
 
 
-# The script allows you to give 2 command line arguments. 
-#The first one is the url on animeheaven site that contains list of the episodes. 
+# The script allows you to give 2 command line arguments.
+#The first one is the url on animeheaven site that contains list of the episodes.
 #The second is optional and should contain a a string which tells the folder where you want to  download
 
 import requests
@@ -99,6 +99,7 @@ def download_episode(url):
                          unit=' MB'):  # iter_content allows us to download a large file.. It doesn't keep the whole
             # file in memory
             episode_file.write(data)
+
 
 
 def main():
